@@ -19,6 +19,19 @@ public class Cliente{
             }
         }
     }
+    void mostraPCConfig(){
+        for (int i = 0; i < PC.length; i++) {
+            if(PC[i] != null){
+                System.out.println("Marca: " + PC[i].marca);
+                System.out.println("Preço: " + PC[i].preco);
+                System.out.println("Configurações:");
+                for(int j = 0; j < 3; j++){
+                    System.out.println(PC[i].Hard[j].nome + " " + PC[i].Hard[j].capacidade);
+                }
+
+            }
+        }
+    }
 
     float calcularTotalCompra(float compra) {
         this.vcompra += compra;

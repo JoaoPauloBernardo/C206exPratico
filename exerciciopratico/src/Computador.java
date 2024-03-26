@@ -5,6 +5,12 @@ public class Computador {
     MemoriaUSB memoriaUSB;
     HardwareBasico [] Hard = new HardwareBasico[10];
 
+    public Computador(String marca, float preco, String nomeSis, int tipoSis) {
+        this.marca = marca;
+        this.preco = preco;
+        this.Sis = new SistemaOperacional(nomeSis, tipoSis);
+    }
+
     void mostraPCConfigs() {
         //primeiro exibe o que e mais facil de "achar"
         //apos isso ele percorre a array pra printar o sistema e a memoria
@@ -21,12 +27,6 @@ public class Computador {
         System.out.println("Possui " + memoriaUSB.nome + " " + memoriaUSB.capacidade + " Gigabytes de memória");
     }
 
-
-    public Computador(String marca, float preco, String nomeSis, int tipoSis) {
-        this.marca = marca;
-        this.preco = preco;
-        this.Sis = new SistemaOperacional(nomeSis, tipoSis);
-    }
 
     void addMemoriaUSB(MemoriaUSB musb) {
         this.memoriaUSB = musb;
