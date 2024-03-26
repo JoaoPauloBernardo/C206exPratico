@@ -26,7 +26,7 @@ public class Cliente{
                 System.out.println("Preço: " + PC[i].preco);
                 System.out.println("Configurações:");
                 for(int j = 0; j < 3; j++){
-                    System.out.println(PC[i].Hard[j].nome + " " + PC[i].Hard[j].capacidade);
+                    System.out.println(PC[i].Hardware[j].nome + " " + PC[i].Hardware[j].capacidade);
                 }
 
             }

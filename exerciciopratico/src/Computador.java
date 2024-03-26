@@ -1,9 +1,9 @@
 public class Computador {
     protected String marca;
-    protected Float preco;
+    protected float preco;
     SistemaOperacional Sis;
     MemoriaUSB memoriaUSB;
-    HardwareBasico [] Hard = new HardwareBasico[10];
+    HardwareBasico [] Hardware = new HardwareBasico [3];
 
     public Computador(String marca, float preco, String nomeSis, int tipoSis) {
         this.marca = marca;
@@ -19,9 +19,9 @@ public class Computador {
         System.out.println("Hardware: ");
 
 
-        for (int i = 0; i < Hard.length; i++) {
-            System.out.println(Hard[i].nome);
-            System.out.println(Hard[i].capacidade);
+        for (int i = 0; i < Hardware.length; i++) {
+            System.out.println(Hardware[i].nome);
+            System.out.println(Hardware[i].capacidade);
         }
         System.out.println("Sistema operacional: " + Sis.nome + " " + Sis.tipo + " bits");
         System.out.println("Possui " + memoriaUSB.nome + " " + memoriaUSB.capacidade + " Gigabytes de memória");
@@ -33,9 +33,9 @@ public class Computador {
     }
 
     void addHardware(HardwareBasico newHard) {
-        for (int i = 0; i < Hard.length; i++) {
-            if (Hard[i] == null) {
-                Hard[i] = newHard;
+        for (int i = 0; i < Hardware.length; i++) {
+            if (Hardware[i] == null) {
+                Hardware[i] = newHard;
                 break;
             }
         }
